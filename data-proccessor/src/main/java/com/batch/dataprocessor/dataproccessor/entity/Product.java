@@ -1,28 +1,28 @@
 package com.batch.dataprocessor.dataproccessor.entity;
 
+
 import javax.persistence.*;
 
 @Entity
 @Table
 public class Product {
     @Id
-    @Column(name = "product_id")
-    private int productId;
+    private Integer productId;
 
-    @Column(name = "title")
+    @Column
     private String title;
 
-    @Column(name = "description")
+    @Column
     private String description;
 
-    @Column(name = "price")
-    private double price;
+    @Column
+    private Double price;
 
-    @Column(name = "discount")
-    private double discount;
+    @Column
+    private Double discount;
 
-    @Column(name = "discountPrice")
-    private double discountPrice;
+    @Column
+    private Double discountPrice;
 
     public Product() {
     }
