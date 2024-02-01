@@ -2,11 +2,11 @@ package com.batch.dataprocessor.dataproccessor.entity;
 
 
 import javax.persistence.*;
-
+@Table(name = "products")
 @Entity
-@Table
-public class Product {
+public class NewProduct {
     @Id
+    @GeneratedValue
     private Integer productId;
 
     @Column
@@ -24,7 +24,7 @@ public class Product {
     @Column
     private Double discountPrice;
 
-    public Product() {
+    public NewProduct() {
     }
 
     public int getProductId() {
@@ -73,5 +73,17 @@ public class Product {
 
     public void setDiscountPrice(double discountPrice) {
         this.discountPrice = discountPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", price=" + price +
+                ", discount=" + discount +
+                ", discountPrice=" + discountPrice +
+                '}';
     }
 }
